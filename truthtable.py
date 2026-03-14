@@ -4,11 +4,21 @@ import re
 
 class TruthTableApp:
     def __init__(self, root):
+        iconmode = False;
+        iconpath = 'binary.png'
+        
         self.root = root
         self.root.title("")
         self.root.geometry("600x450")
-        # icon = tk.PhotoImage(file='binary.png')
-        # self.root.iconphoto(True, icon)
+
+        if iconmode:
+            icon = tk.PhotoImage(file=iconpath)
+            self.root.iconphoto(True, icon)
+        else:
+            blank_white = tk.PhotoImage(width=32, height=32)
+            blank_white.put("#f3f3f3", to=(0, 0, 32, 32))
+            self.root.iconphoto(False, blank_white)
+            
         style = ttk.Style()
         if 'clam' in style.theme_names():
             style.theme_use('clam')
