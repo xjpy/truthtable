@@ -260,10 +260,10 @@ class TruthTableApp:
         self.show_groups_var = tk.BooleanVar(value=False)
         tk.Checkbutton(bot, text="Pokaż grupy", variable=self.show_groups_var, 
                command=lambda: self.render_kmap_canvas(n, r_seq, c_seq),
-               bg=self.colors['high'], # Kolor tła paska
-               fg=self.colors['txt'],  # Kolor tekstu
-               selectcolor=self.colors['surf'], # Kolor kwadracika wewnątrz
-               activebackground=self.colors['active'], # Kolor po najechaniu
+               bg=self.colors['high'],
+               fg=self.colors['txt'], 
+               selectcolor=self.colors['surf'],
+               activebackground=self.colors['active'], 
                activeforeground=self.colors['txt'],
                bd=0, highlightthickness=0).pack(side=tk.LEFT, padx=10, pady=5)
         
